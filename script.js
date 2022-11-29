@@ -24,4 +24,7 @@ function updateRate() {
 }
 
 //display result
-document.getElementById("result").innerHTML="If you deposit 100000",\<br\>"at an interest rate of" "3.5%"\<br\>"You will receive an amount of "175000",\<br\>in the year "2025"\<br\>"
+document.getElementById("result").innerHTML="If you deposit 100000"<br>
+"at an interest rate of 3.5%"<br>
+"You will receive an amount of 175000",<br/>
+"in the year 2025"
