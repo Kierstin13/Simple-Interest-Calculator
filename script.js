@@ -1,30 +1,35 @@
 function compute()
 {
-    p = document.getElementById("principal").value;
+    principal = document.getElementById("principal").value;
 
-    //Create inputs
+    //Create input variables
     var principal = document.getElementById("principal").value;
+    if (principal <= 0) {
+        alert("Enter a positive number!");
+        document.getElementById("principal").focus();
+        return false;
+    }
     var rate = document.getElementById("rate").value;
+    var rateout = document.getElementById("rateoutput").value;
     var years = document.getElementById("years").value;
-    var interest = principal * years * rate/100;
-    var year = new Date().getFullYear()+parseInt(years);   
-}
+    }
+    var interest = (principal * years * rate) /100;
+    var year = new Date().getFullYear()+parseInt(years);
+ 
 
-//error message
-if(principal.value == 0){
-    alert("Enter a positive number");
-    document.getElementById("principal").focus();
-    return false;
-}
-
-//Get rate
-function updateRate() {
+//Get rate slider
+function updateRate() 
+{
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval;
+    document.getElementById("rateoutput").innerText = rateout;
 }
 
 //display result
-document.getElementById("result").innerHTML="If you deposit 100000"<br>
-"at an interest rate of 3.5%"<br>
-"You will receive an amount of 175000",<br/>
-"in the year 2025"
+result.innerHTML= 'If you deposit '+principal+',\n'+
+'at an interest rate of '+rate+'%.\n'+
+'You will receive an amount of '+interest+',\n'+
+'in the year '+actualyear.toString()
+
+// calculate the result
+result= document.getElementById('result')
